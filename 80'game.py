@@ -31,9 +31,9 @@ def coin():
 
 #game function
 def game():
-    print("You've just woken up. Confused lying the middle of a huge forest. You get up, but setting around you is not familiar"
+    print("You've just woken up. Confused, lying the middle of a huge forest. You get up, but setting around you is not familiar"
     " at all.\nWhat other option that heading somewhere do you have? Let's hit the roud!")
-    for i in range(200):
+    for i in range(100):
         nsew = int(input("Where do you want to go? (N - 1/S - 2/E - 3/W - 4/Stay - 5): "))
 
 #moving in a direction 
@@ -41,30 +41,30 @@ def game():
             go_north()
             print("Y axis: " + str(y_axis))
             print("X axis: " + str(x_axis))
-            print("You have " + str(coins) + "coins!")
+            print("You have " + str(coins) + " coins!")
 
         elif nsew == 2:
             go_south()
             print("Y axis: " + str(y_axis))
             print("X axis: " + str(x_axis))
-            print("You have " + str(coins) + "coins!")
+            print("You have " + str(coins) + " coins!")
 
         elif nsew == 3:
             go_east()
             print("Y axis: " + str(y_axis))
             print("X axis: " + str(x_axis))
-            print("You have " + str(coins) + "coins!")
+            print("You have " + str(coins) + " coins!")
 
         elif nsew == 4:
             go_west()
             print("Y axis: " + str(y_axis))
             print("X axis: " + str(x_axis))
-            print("You have " + str(coins) + "coins!")
+            print("You have " + str(coins) + " coins!")
 
         elif nsew == 5:
             print("Y axis: " + str(y_axis))
             print("X axis: " + str(x_axis))
-            print("You have " + str(coins) + "coins!")
+            print("You have " + str(coins) + " coins!")
 
         else:
             print("Let's take that more seriously. Come on, input a direction.")
@@ -75,9 +75,13 @@ def game():
             coin()
 
         elif y_axis == -1 and x_axis == -1:
-            print("Well, that was fast. You found a piece of paper with some numbers")
+            print("Well, that was fast. You found a piece of paper with some numbers. Coordinates!")
+            print("[                                       ]")
+            print("               Y  X                      ")
+            print("               7,-3                      ")
+            print("[                                       ]")
 
-        elif y_axis == 12 and x_axis == 12:
+        elif y_axis == 7 and x_axis == -3:
             print("Uuu, a bone fire. That's interesting.  ")
 
         else:
@@ -89,7 +93,7 @@ def game():
 
         elif y_axis == -8:
             print("That's the end of the map.")
-            
+
         elif x_axis == 8 or x_axis == -8:
             print("That's the end of the map.")
 
