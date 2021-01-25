@@ -26,9 +26,14 @@ txt.hideturtle()
 txt.goto(-600, 300)
 txt.write("Heyy", align="center", font=("Courier", 24, "normal"))
 
+# Filling pen
+fill = turtle.Turtle()
+fill.speed(0)
+fill.color("white")
+fill.hideturtle()
 
 
-
+# Pen writing hash
 pen = turtle.Turtle()
 pen.color("white")
 pen.hideturtle()
@@ -242,9 +247,38 @@ wn.onkeypress(go_south, "s")
 wn.onkeypress(go_east, "d")
 wn.onkeypress(go_west, "a")
 
+def draw():
+    def square():
+        fill.goto(loc.xcor(), loc.ycor())
+        fill.penup()
+        fill.forward(25)
+        fill.right(90)
+        fill.pendown()
+        fill.forward(25)
+        fill.right(90)
+        fill.forward(50)
+        fill.right(90)
+        fill.forward(50)
+        fill.right(90)
+        fill.forward(50)
+        fill.right(90)
+        fill.forward(25)
+        fill.penup()
+        fill.right(90)
+        fill.forward(25)
+        fill.right(180)
+        fill.penup()
+       
+    fill.fillcolor("red")
+    fill.begin_fill()
+    square()
+    fill.end_fill()
+
+
 
 # game function
 while True:
     wn.update()
+    draw()
 
 
