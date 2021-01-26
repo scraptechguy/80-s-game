@@ -26,6 +26,13 @@ txt.hideturtle()
 txt.goto(-600, 300)
 txt.write("Heyy", align="center", font=("Courier", 24, "normal"))
 
+# Coordinates
+cor = turtle.Turtle()
+cor.speed(0)
+cor.color("white")
+cor.penup()
+cor.hideturtle()
+
 # Filling pen
 fill = turtle.Turtle()
 fill.speed(0)
@@ -281,4 +288,18 @@ while True:
     wn.update()
     draw()
 
+    # Coordinates
+    cor.clear()
+    cor.goto(-600, -300)
+    cor.write("X: {}       Y: {}".format(loc.xcor(), loc.ycor()))
 
+
+    # Places with action
+    if loc.xcor() == 50 and loc.ycor() == 0:
+        txt.clear()
+        txt.goto(-600, 300)
+        txt.write("Wow that was fast, you found something. Good for you ", font=("Courier", 24, "normal"))
+
+    elif loc.xcor() == 100 and loc.ycor() == -100:
+        txt.clear()
+        txt.write("Hola", font=("Courier", 24, "normal"))
