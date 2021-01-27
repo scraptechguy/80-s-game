@@ -33,6 +33,13 @@ cor.color("white")
 cor.penup()
 cor.hideturtle()
 
+# Coins
+cn = turtle.Turtle()
+cn.speed(0)
+cn.color("white")
+cn.penup()
+cn.hideturtle()
+
 # Filling pen
 fill = turtle.Turtle()
 fill.speed(0)
@@ -293,6 +300,11 @@ while True:
     cor.goto(-600, -300)
     cor.write("X: {}       Y: {}".format(loc.xcor(), loc.ycor()))
 
+    # Coins
+    cn.clear()
+    cn.goto(-600, -320)
+    cn.write("Coins: {}   ".format(coins))
+
 
     # Places with action
     if loc.xcor() == 50 and loc.ycor() == 0:
@@ -303,3 +315,7 @@ while True:
     elif loc.xcor() == 100 and loc.ycor() == -100:
         txt.clear()
         txt.write("Hola", font=("Courier", 24, "normal"))
+
+    elif loc.xcor() == -50 and loc.ycor() == -50:
+        coin()
+      
