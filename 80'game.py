@@ -24,7 +24,16 @@ txt.color("white")
 txt.penup()
 txt.hideturtle()
 txt.goto(-600, 300)
-txt.write("Heyy", align="center", font=("Courier", 24, "normal"))
+txt.write(
+    "Welcome! You've just woken up. Confused, lying the middle of a huge forest.",
+    font=("Courier", 20, "normal"), 
+)
+
+# txt.clear()
+# txt.write(
+    # "Uf",
+    # font=("Courier", 20, "normal")
+#)
 
 # Coordinates
 cor = turtle.Turtle()
@@ -248,11 +257,7 @@ def go_west():
     x = loc.xcor()
     x -= 50
     loc.setx(x)
-    
-def coin():
-    global coins
-    coins += 1
-    return coins
+
 
 # Keyboard binding
 wn.listen()
@@ -283,12 +288,16 @@ def draw():
         fill.right(180)
         fill.penup()
        
-    fill.fillcolor("red")
+    fill.fillcolor("purple")
     fill.begin_fill()
     square()
     fill.end_fill()
 
 
+coins = 0
+c1 = 0
+c2 = 0      # Coin collecting mechanism to avoid mistakes in number of coins
+c3 = 0
 
 # game function
 while True:
@@ -305,17 +314,99 @@ while True:
     cn.goto(-600, -320)
     cn.write("Coins: {}   ".format(coins))
 
+    # Boarders
+    if loc.xcor() < -625:
+        loc.setx(-600)
+
+    elif loc.xcor() > 625:
+        loc.setx(600)
+    
+    elif loc.ycor() < -275:
+        loc.sety(-250)
+    
+    elif loc.ycor() > 275:
+        loc.sety(250)
 
     # Places with action
     if loc.xcor() == 50 and loc.ycor() == 0:
         txt.clear()
         txt.goto(-600, 300)
-        txt.write("Wow that was fast, you found something. Good for you ", font=("Courier", 24, "normal"))
+        txt.write( 
+            "Wow that was fast, you found something. Good for you!",
+            font=("Courier", 24, "normal"),
+        )
 
     elif loc.xcor() == 100 and loc.ycor() == -100:
         txt.clear()
-        txt.write("Hola", font=("Courier", 24, "normal"))
+        txt.write(
+            "Heyy",
+            font=("Courier", 24, "normal")
+        )
 
+    #c1
+    elif loc.xcor() == 50 and loc.ycor() == -50:
+        txt.clear()
+        txt.write(
+            "Next one! Great.",
+            font=("Courier", 24, "normal")
+        )
+
+        if coins == 0:
+            coins = 1
+
+        elif coins == 1 and c2 == 1:
+            coins = 2
+
+        elif coins == 1 and c3 == 1:
+            coins = 2
+
+        elif coins == 2 and c2 == 1 and c3 == 1:
+            coins = 3
+
+        c1 = 1
+
+    # c2
     elif loc.xcor() == -50 and loc.ycor() == -50:
-        coin()
+        txt.clear()
+        txt.write(
+            "Hm, something shiny's lying on the ground. Yes! It's a coin. ",
+            font=("Courier", 24, "normal")
+        )
+
+        if coins == 0:
+            coins = 1
+
+        elif coins == 1 and c1 == 1:
+            coins = 2
+
+        elif coins == 1 and c3 == 1:
+            coins = 2
+
+        elif coins == 2 and c1 == 1 and c3 == 1:
+            coins = 3
+
+        c2 = 1
+
+    # c3
+    elif loc.xcor() == -100 and loc.ycor() == -50:
+        txt.clear()
+        txt.write(
+            "Another one! Good for you.",
+            font=("Courier", 24, "normal")
+        )
+
+        if coins == 0:
+            coins = 1
+
+        elif coins == 1 and c1 == 1:
+            coins = 2
+
+        elif coins == 1 and c2 == 1:
+            coins = 2
+
+        elif coins == 2 and c1 == 1 and c2 == 1:
+            coins = 3
+
+        c3 = 1
+
       
