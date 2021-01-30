@@ -1,13 +1,13 @@
 import turtle
 
-# defining window looks
+# defining screen looks
 wn = turtle.Screen()
 wn.bgcolor("black")
 wn.setup(width=1280, height=720)
 wn.tracer(0)
 
 
-# Objects
+# On screen objects
 
 # The square
 loc = turtle.Turtle()
@@ -17,7 +17,7 @@ loc.color("white")
 loc.penup()
 loc.goto(0, 0)
 
-# Just text
+# Text-writing pen
 txt = turtle.Turtle()
 txt.speed(0)
 txt.color("white")
@@ -29,39 +29,34 @@ txt.write(
     font=("Courier", 20, "normal"), 
 )
 
-# txt.clear()
-# txt.write(
-    # "Uf",
-    # font=("Courier", 20, "normal")
-#)
 
-# Coordinates
+# Coordinates (left down corner of the screen)
 cor = turtle.Turtle()
 cor.speed(0)
 cor.color("white")
 cor.penup()
 cor.hideturtle()
 
-# Coins
+# Number of coins (left corner of the screen)
 cn = turtle.Turtle()
 cn.speed(0)
 cn.color("white")
 cn.penup()
 cn.hideturtle()
 
-# Filling pen
+# Filling pen (fil position you've been to)
 fill = turtle.Turtle()
 fill.speed(0)
 fill.color("white")
 fill.hideturtle()
 
 
-# Pen writing hash
+# Grid-writing pen
 pen = turtle.Turtle()
 pen.color("white")
 pen.hideturtle()
 
-# Hash x up
+# Grid x up (northern half of the grid)
 pen.penup()
 pen.goto(-625, 25)
 pen.pendown()
@@ -89,7 +84,7 @@ pen.goto(625, 275)
 pen.penup()
 
 
-# Hash x down
+# Grid x down (southern half of the grid)
 pen.penup()
 pen.goto(-625, -25)
 pen.pendown()
@@ -117,7 +112,7 @@ pen.goto(625, -275)
 pen.penup()
 
 
-# Hash y left
+# Grid y left (western half of the grid)
 pen.penup()
 pen.goto(-25, 275)
 pen.pendown()
@@ -172,7 +167,7 @@ pen.pendown()
 pen.goto(-625, -275)
 pen.penup()
 
-# Hash y right
+# Grid y right (eastern half of the grid)
 pen.penup()
 pen.goto(25, 275)
 pen.pendown()
@@ -229,18 +224,14 @@ pen.penup()
 
 
 
-
-
-
-# defining and zeroing variables
+# Defining coordinates and setting it's value to zero  
 y_axis = 0
 x_axis = 0
-coins = 0
 
-# defining movement and number of coins
+# Defining movement
 def go_north():
     y = loc.ycor()
-    y += 50
+    y += 50             # Jumping by 50 pixels per click
     loc.sety(y)
 
 def go_south():
@@ -259,16 +250,20 @@ def go_west():
     loc.setx(x)
 
 
-# Keyboard binding
+# Keyboard binding with movement functions
 wn.listen()
 wn.onkeypress(go_north, "w")
 wn.onkeypress(go_south, "s")
 wn.onkeypress(go_east, "d")
 wn.onkeypress(go_west, "a")
 
+
+
+# Square filling function (Yes, that's why all the squares are purple )
 def draw():
+    # Drawing a square that will be filled (The square is the same size as one grid square)
     def square():
-        fill.goto(loc.xcor(), loc.ycor())
+        fill.goto(loc.xcor(), loc.ycor())       # Fill pen will follow loc object
         fill.penup()
         fill.forward(25)
         fill.right(90)
@@ -287,47 +282,56 @@ def draw():
         fill.forward(25)
         fill.right(180)
         fill.penup()
-       
+
+    # Fill color + actual filling of the square  
     fill.fillcolor("purple")
     fill.begin_fill()
     square()
     fill.end_fill()
 
 
+# Defining coin concerning variables and setting all of them equal to zero
 coins = 0
+# c1, c2, and c3 are places with coins. When the place is found by player for the first time, value increases by 1 ->
+# -> program will be able to tell, whether you already received a coin for that certain place  
 c1 = 0
 c2 = 0      # Coin collecting mechanism to avoid mistakes in number of coins
 c3 = 0
 
-# game function
+# Game loop
 while True:
     wn.update()
     draw()
 
-    # Coordinates
+    # Displaying coordinates info (left down corner of the screen)
     cor.clear()
     cor.goto(-600, -300)
     cor.write("X: {}       Y: {}".format(loc.xcor(), loc.ycor()))
 
-    # Coins
+    # Displaying coins info (left down corner of the screen)
     cn.clear()
     cn.goto(-600, -320)
     cn.write("Coins: {}   ".format(coins))
 
-    # Boarders
+    # Boarders (As soon as boarder is hit, loc is moved back by one jump, 50 pixels.)
+    
+    # Left side
     if loc.xcor() < -625:
         loc.setx(-600)
 
+    # Right side
     elif loc.xcor() > 625:
         loc.setx(600)
     
+    # Bottom side 
     elif loc.ycor() < -275:
         loc.sety(-250)
     
+    # Top side
     elif loc.ycor() > 275:
         loc.sety(250)
 
-    # Places with action
+    # Places with actions (If you step on certain location, something will happen.)
     if loc.xcor() == 50 and loc.ycor() == 0:
         txt.clear()
         txt.goto(-600, 300)
@@ -343,7 +347,10 @@ while True:
             font=("Courier", 24, "normal")
         )
 
-    #c1
+
+    # Places with coins 
+
+    # c1
     elif loc.xcor() == 50 and loc.ycor() == -50:
         txt.clear()
         txt.write(
@@ -351,6 +358,7 @@ while True:
             font=("Courier", 24, "normal")
         )
 
+        # Coin collecting mechanism
         if coins == 0:
             coins = 1
 
@@ -373,6 +381,7 @@ while True:
             font=("Courier", 24, "normal")
         )
 
+        # Coin collecting mechanism
         if coins == 0:
             coins = 1
 
@@ -395,6 +404,7 @@ while True:
             font=("Courier", 24, "normal")
         )
 
+        # Coin collecting mechanism
         if coins == 0:
             coins = 1
 
@@ -407,6 +417,4 @@ while True:
         elif coins == 2 and c1 == 1 and c2 == 1:
             coins = 3
 
-        c3 = 1
-
-      
+        c3 = 1      
