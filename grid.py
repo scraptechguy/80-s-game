@@ -50,3 +50,15 @@ pen.goto(-625, 275)
 pen.pendown()
 
 pen.right(90)
+
+for i in range(11):
+   pen.forward(1250)
+   pen.right(180)
+   pen.forward(1250)
+   pen.left(90)
+   pen.forward(50)
+   pen.left(90) 
+
+
+while True:
+    wn.update()
