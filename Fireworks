@@ -45,3 +45,33 @@ blueRocket2.showturtle()
 blueRocket3.showturtle()
 blueRocket4.showturtle()
 
+
+for i in range(30):
+    y2 = blueRocket2.ycor()
+    y2 += 2
+    blueRocket2.sety(y2)
+
+    x2 = blueRocket2.xcor()
+    x2 += 4
+    blueRocket2.setx(x2)
+
+
+    y3 = blueRocket3.ycor()
+    y3 += 2
+    blueRocket3.sety(y3)
+
+    x3 = blueRocket3.xcor()
+    x3 -= 4
+    blueRocket3.setx(x3)
+
+
+    y4 = blueRocket4.ycor()
+    y4 += 2
+    blueRocket4.sety(y4)
+
+    x4 = blueRocket4.xcor()
+    x4 += 3
+    blueRocket4.setx(x4)
+
+while True:
+    wn.update()
