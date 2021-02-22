@@ -63,3 +63,61 @@ blueRocket8.goto(-400, -50)
 
 # ________________________________________
 
+purpleRocket2 = turtle.Turtle()
+purpleRocket2.hideturtle()
+purpleRocket2.penup()
+purpleRocket2.color("purple")
+purpleRocket2.shape("square")
+purpleRocket2.shapesize(0.5, 0.5)
+purpleRocket2.goto(300, -50)
+
+purpleRocket3 = turtle.Turtle()
+purpleRocket3.hideturtle()
+purpleRocket3.penup()
+purpleRocket3.color("purple")
+purpleRocket3.shape("square")
+purpleRocket3.shapesize(0.5, 0.5)
+purpleRocket3.goto(300, -50)
+
+purpleRocket4 = turtle.Turtle()
+purpleRocket4.hideturtle()
+purpleRocket4.penup()
+purpleRocket4.color("purple")
+purpleRocket4.shape("square")
+purpleRocket4.shapesize(0.5, 0.5)
+purpleRocket4.goto(300, -50)
+
+purpleRocket5 = turtle.Turtle()
+purpleRocket5.hideturtle()
+purpleRocket5.penup()
+purpleRocket5.color("purple")
+purpleRocket5.shape("square")
+purpleRocket5.shapesize(0.5, 0.5)
+purpleRocket5.goto(300, -50)
+
+purpleRocket6 = turtle.Turtle()
+purpleRocket6.hideturtle()
+purpleRocket6.penup()
+purpleRocket6.color("purple")
+purpleRocket6.shape("square")
+purpleRocket6.shapesize(0.5, 0.5)
+purpleRocket6.goto(300, -50)
+
+purpleRocket7 = turtle.Turtle()
+purpleRocket7.hideturtle()
+purpleRocket7.penup()
+purpleRocket7.color("purple")
+purpleRocket7.shape("square")
+purpleRocket7.shapesize(0.5, 0.5)
+purpleRocket7.goto(300, -50)
+
+purpleRocket8 = turtle.Turtle()
+purpleRocket8.hideturtle()
+purpleRocket8.penup()
+purpleRocket8.color("purple")
+purpleRocket8.shape("square")
+purpleRocket8.shapesize(0.5, 0.5)
+purpleRocket8.goto(300, -50)
+
+# ________________________________________
+
