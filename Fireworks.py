@@ -121,3 +121,26 @@ purpleRocket8.goto(300, -50)
 
 # ________________________________________
 
+blueRocket = turtle.Turtle()
+blueRocket.hideturtle()
+blueRocket.color("gray")
+blueRocket.shape("square")
+blueRocket.shapesize(0.3, 1.5)
+blueRocket.penup()
+blueRocket.goto(-400, -450)
+blueRocket.showturtle()
+blueRocket.left(90)
+blueRocket.forward(400)
+blueRocket.hideturtle()
+
+
+blueRocket2.showturtle()
+blueRocket3.showturtle()
+blueRocket4.showturtle()
+blueRocket5.showturtle()
+blueRocket6.showturtle()
+blueRocket7.showturtle()
+blueRocket8.showturtle()
+
+
+
