@@ -302,5 +302,16 @@ for i in range(30):
     purpleRocket8.setx(px8)
 
 
+purpleRocket.hideturtle()
+purpleRocket2.hideturtle()
+purpleRocket3.hideturtle()
+purpleRocket4.hideturtle()
+purpleRocket5.hideturtle()
+purpleRocket6.hideturtle()
+purpleRocket7.hideturtle()
+purpleRocket8.hideturtle()
+
+
+
 
 
