@@ -206,4 +206,35 @@ for i in range(30):
     bx8 -= 1
     blueRocket8.setx(bx8)
 
+blueRocket.hideturtle()
+blueRocket2.hideturtle()
+blueRocket3.hideturtle()
+blueRocket4.hideturtle()
+blueRocket5.hideturtle()
+blueRocket6.hideturtle()
+blueRocket7.hideturtle()
+blueRocket8.hideturtle()
+
+
+
+purpleRocket = turtle.Turtle()
+purpleRocket.hideturtle()
+purpleRocket.color("gray")
+purpleRocket.shape("square")
+purpleRocket.shapesize(0.3, 1.5)
+purpleRocket.penup()
+purpleRocket.goto(300, -450)
+purpleRocket.showturtle()
+purpleRocket.left(90)
+purpleRocket.forward(400)
+purpleRocket.hideturtle()
+
+purpleRocket2.showturtle()
+purpleRocket3.showturtle()
+purpleRocket4.showturtle()
+purpleRocket5.showturtle()
+purpleRocket6.showturtle()
+purpleRocket7.showturtle()
+purpleRocket8.showturtle()
+
 
