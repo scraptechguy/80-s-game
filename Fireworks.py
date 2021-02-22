@@ -312,6 +312,7 @@ purpleRocket7.hideturtle()
 purpleRocket8.hideturtle()
 
 
-
+while True:
+    wn.update()
 
 
