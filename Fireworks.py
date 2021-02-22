@@ -53,91 +53,13 @@ blueRocket7.shape("square")
 blueRocket7.shapesize(0.5, 0.5)
 blueRocket7.goto(-400, -50)
 
-blueRocket = turtle.Turtle()
-blueRocket.hideturtle()
-blueRocket.color("gray")
-blueRocket.shape("square")
-blueRocket.shapesize(0.3, 1.5)
-blueRocket.penup()
-blueRocket.goto(-400, -450)
-blueRocket.showturtle()
-blueRocket.left(90)
-blueRocket.forward(400)
-blueRocket.hideturtle()
+blueRocket8 = turtle.Turtle()
+blueRocket8.hideturtle()
+blueRocket8.penup()
+blueRocket8.color("blue")
+blueRocket8.shape("square")
+blueRocket8.shapesize(0.5, 0.5)
+blueRocket8.goto(-400, -50)
 
-blueRocket2.showturtle()
-blueRocket3.showturtle()
-blueRocket4.showturtle()
-blueRocket5.showturtle()
-blueRocket6.showturtle()
-blueRocket7.showturtle()
+# ________________________________________
 
-
-for i in range(30):
-    by2 = blueRocket2.ycor()
-    by2 += 2
-    blueRocket2.sety(by2)
-
-    bx2 = blueRocket2.xcor()
-    bx2 += 4
-    blueRocket2.setx(bx2)
-
-
-    by3 = blueRocket3.ycor()
-    by3 += 2
-    blueRocket3.sety(by3)
-
-    bx3 = blueRocket3.xcor()
-    bx3 -= 4
-    blueRocket3.setx(bx3)
-
-
-    by4 = blueRocket4.ycor()
-    by4 += 2
-    blueRocket4.sety(by4)
-
-    bx4 = blueRocket4.xcor()
-    bx4 += 3
-    blueRocket4.setx(bx4)
-
-
-    by5 = blueRocket5.ycor()
-    by5 += 2
-    blueRocket5.sety(by5)
-
-    bx5 = blueRocket5.xcor()
-    bx5 -= 4
-    blueRocket5.setx(bx5)
-
-
-    by6 = blueRocket6.ycor()
-    by6 -= 2
-    blueRocket6.sety(by6)
-
-    bx6 = blueRocket6.xcor()
-    bx6 -= 3
-    blueRocket6.setx(bx6)
-
-
-    by7 = blueRocket7.ycor()
-    by7 -= 1
-    blueRocket7.sety(by7)
-
-    bx7 = blueRocket7.xcor()
-    bx7 += 2
-    blueRocket7.setx(bx7)
-
-
-
-blueRocket.hideturtle()
-blueRocket2.hideturtle()
-blueRocket3.hideturtle()
-blueRocket4.hideturtle()
-blueRocket5.hideturtle()
-blueRocket6.hideturtle()
-blueRocket7.hideturtle()
-
-
-
-while True:
-    wn.update()
