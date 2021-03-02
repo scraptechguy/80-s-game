@@ -373,5 +373,26 @@ purpleRocket8.hideturtle()
 
 
 
+redRocket = turtle.Turtle()
+redRocket.hideturtle()
+redRocket.color("gray")
+redRocket.shape("square")
+redRocket.shapesize(0.3, 1.5)
+redRocket.penup()
+redRocket.goto(300, -450)
+redRocket.showturtle()
+redRocket.left(90)
+redRocket.forward(600)
+redRocket.hideturtle()
+
+redRocket2.showturtle()
+redRocket3.showturtle()
+redRocket4.showturtle()
+redRocket5.showturtle()
+redRocket6.showturtle()
+redRocket7.showturtle()
+redRocket8.showturtle()
+
+
 
 
