@@ -467,7 +467,8 @@ redRocket6.hideturtle()
 redRocket7.hideturtle()
 redRocket8.hideturtle()
 
-
+while True:
+	wn.update()
 
 
 
