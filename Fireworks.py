@@ -458,5 +458,17 @@ for i in range(30):
 	redRocket8.setx(rx8)
 
 
+redRocket.hideturtle()
+redRocket2.hideturtle()
+redRocket3.hideturtle()
+redRocket4.hideturtle()
+redRocket5.hideturtle()
+redRocket6.hideturtle()
+redRocket7.hideturtle()
+redRocket8.hideturtle()
+
+
+
+
 
 
