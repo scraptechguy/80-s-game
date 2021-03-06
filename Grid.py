@@ -58,6 +58,6 @@ for i in range(11):
    pen.forward(50)
    pen.left(90) 
 
-
+# Da loop
 while True:
     wn.update()
